@@ -13,6 +13,7 @@ dotEnv.config();
 
 // import the router
 import router from "./routes/crudRoutes.js";
+import UserRouter from "./routes/userRoutes.js";
 
 // create instance of express to create a app
 const app = express();
@@ -30,6 +31,7 @@ app.get("/", (request, response) => {
 
 // use the router
 app.use("/api", router);
+app.use("/api", UserRouter);
 
 // this promise get the mongodb connecting string from the .env file and connect the db
 const PORT = process.env.PORT || 8080;
