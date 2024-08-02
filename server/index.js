@@ -31,7 +31,7 @@ app.get("/", (request, response) => {
 
 // use the router
 app.use("/api", router);
-app.use("/api", UserRouter);
+app.use("/user", UserRouter);
 
 // this promise get the mongodb connecting string from the .env file and connect the db
 const PORT = process.env.PORT || 8080;

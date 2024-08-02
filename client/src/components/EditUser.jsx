@@ -49,7 +49,7 @@ const EditUser = () => {
         address: values.address,
       });
       if (response.status === 200) {
-        navigate("/");
+        navigate("/admin-dashboard");
       }
     } catch (err) {
       setError({ err: "Failed to update user. Please try again." });

@@ -10,7 +10,7 @@ const requireAuth = async (req, res, next) => {
     return res.status(401).json({ error: "Authorization token required!" });
   }
 
-  // from the authorization header split the token from the header it looks like this conver the string into array and access the token [Bearer, <Somthing>]
+  // from the authorization header split the token from the header it looks like this convert the string into array and access the token [Bearer, <Somthing>]
   const token = authorization.split(" ")[1];
 
   try {

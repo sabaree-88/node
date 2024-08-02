@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 const ViewUser = () => {
   const [user, setUser] = useState([]);
+  const { logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+  };
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -21,6 +27,7 @@ const ViewUser = () => {
         <button>
           <Link to={"/add"}>Add user</Link>
         </button>
+        <button onClick={handleLogout}>Logout</button>
         <table border={"1px"}>
           <thead>
             <tr>

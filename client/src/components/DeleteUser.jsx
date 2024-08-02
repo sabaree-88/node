@@ -7,7 +7,7 @@ const DeleteUser = () => {
   const handleDelete = async () => {
     try {
       await axios.delete(`http://localhost:8000/api/delete/${id}`);
-      navigate("/");
+      navigate("/admin-dashboard");
     } catch (error) {
       console.log(error);
     }

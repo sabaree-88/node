@@ -30,7 +30,7 @@ const AddUser = () => {
         address: values.address,
       });
       if (response.status === 200) {
-        navigate("/");
+        navigate("/admin-dashboard");
       }
     } catch (err) {
       if (err.response) {

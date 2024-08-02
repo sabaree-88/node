@@ -1,5 +1,5 @@
 import { User } from "../model/userSchema.js";
-import jwt from "jsonwebtoken'"; // jsonwebtoken for authentication
+import jwt from "jsonwebtoken"; // jsonwebtoken for authentication
 
 // create a token for the user to authenticate
 const createToken = (_id) => {
